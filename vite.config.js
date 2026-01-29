@@ -7,7 +7,13 @@ export default defineConfig({
   plugins: [
         tailwindcss(),
     react()],
-     base: '/'
+    
+
+     base: '/' ,
+
+
+     
+
 })
 
 
