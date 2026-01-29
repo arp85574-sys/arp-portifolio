@@ -1,5 +1,5 @@
 import React from 'react'
-import { Code, Wrench } from 'lucide-react'
+// import { Code, Wrench } from 'lucide-react'
 import useScrollAnimation from '../Components/useScrollAnimation';
 
 function About() {
