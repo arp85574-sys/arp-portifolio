@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+
+.typewriter{
+    overflow: hidden;
+    border-right: 0.15em solid  pink;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s step(20,end) forwards, blink-caret 0.75s step-end 4;
+}
+
+
+
+
+
+
+
+@keyframes typingAbout {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch; /* About Me */
+  }
+}
+
+
+@keyframes typingAbout {
+  from { width: 0; }
+  to { width: 9ch; } /* "About Me" length */
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: #ec4899; } /* blink during typing */
+}
+
+.animate-typingAbout {
+  width: 9ch; /* About Me ke letters */
+  border-right: 2px solid #ec4899; /* pink cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    typingAbout 2s steps(9) forwards, /* typing effect */
+    blink 0.8s steps(1) 0s 3; /* blink 3 times during typing */
+}
+
+
+
+
+
+@keyframes typingSkills {
+  from { width: 0; }
+  to { width: 10ch; } /* My Skills length */
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: pink; } /* blink during typing */
+}
+
+.animate-typingSkills {
+  width: 10ch;
+  border-right: 2px solid #ec4899; /* pink cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 
+    typingSkills 2.2s steps(10) forwards, /* typing */
+    blink 0.8s steps(1) 0s 3; /* blink 3 times during typing */
+}
+
+
+/* Typing effect */
+@keyframes typingExperience {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch; /* "Work Experience" */
+  }
+}
+
+/* Cursor blink during typing */
+@keyframes blinkExperience {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: #ec4899; } /* pink-300 */
+}
+
+/* MAIN CLASS */
+.animate-typingExperience {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ec4899;
+  animation:
+    typingExperience 2.8s steps(15, end) forwards,
+    blinkExperience 0.8s step-end 3.5s; /* blink stops after typing */
+}
+
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; } /* "Get In Touch" has 12 characters including spaces */
+}
+
+/* Cursor blink during typing only */
+@keyframes blink {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color:#ec4899; } /* white cursor */
+}
+
+/* Typing utility */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid 
+  #ec4899; /* cursor */
+  width: 0;
+  animation: typing 3s steps(12, end) forwards, blink 0.7s step-end 3s; 
+  /* blink stops after 3s when typing finishes */
+}
+
+/* Optional: fade-in from bottom for the section */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing animation for "My Project" */
+@keyframes typing-project {
+  from { width: 0; }
+  to { width: 10ch; } /* "My Project" = 10 characters including space */
+}
+
+/* Cursor blink only during typing */
+@keyframes blink-project {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: #ec4899; } /* pink-300 */
+}
+
+/* Typing effect */
+.animate-typingProject {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ec4899; /* cursor */
+  width: 0;
+  animation:
+    typing-project 2s steps(10, end) forwards,  /* typing */
+    blink-project 0.7s step-end 2s forwards;    /* blink only during typing */
+}
+
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #f9a8d4;
+
+  /* 👇 width ko content tak limit karta hai */
+  width: fit-content;
+
+  animation:
+    typing 2.5s steps(13, end) forwards,
+    blink 0.8s step-end infinite;
+}
+
+/* 👇 yahan 13 = "My Projects" ke letters */
+@keyframes typing {
+  from { max-width: 0 }
+  to   { max-width: 13ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 13ch; } /* "Get In Touch" = 13 characters */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #f9a8d4; /* cursor color */
+  max-width: 0;
+  animation:
+    typing 2s steps(13, end) forwards,
+    blink 0.8s step-end infinite;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* Full Stack Developer typing */
+@keyframes typing-fsd {
+  from { width: 0; }
+  to { width: 17ch; } /* Full Stack Developer = 21 characters */
+}
+
+/* Cursor blink ONLY during typing */
+@keyframes blink-fsd {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: #ec4899; }
+}
+
+/* Apply this class */
+.animate-typing-fsd {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid #ec4899;
+  animation:
+    typing-fsd 3s steps(21, end) forwards,
+    blink-fsd 0.7s step-end 3s; /* blink stops after typing */
+}
+
+
+  
+        
+          @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 1s ease forwards;
+          }
+
+          @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeUp {
+            animation: fadeUp 0.8s ease forwards;
+          }
+        
+      
+
+
+  @keyframes imageFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-imageFloat {
+  animation: imageFloat 1.2s ease-out forwards;
+}
+        
